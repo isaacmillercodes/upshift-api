@@ -1,0 +1,25 @@
+{
+  "name": "upshift-api",
+  "version": "1.0.0",
+  "description": "Back end for Upshift built in Node",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacmillercodes/upshift-api.git"
+  },
+  "author": "Isaac Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaacmillercodes/upshift-api/issues"
+  },
+  "homepage": "https://github.com/isaacmillercodes/upshift-api#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "knex": "^0.12.9"
+  }
+}
