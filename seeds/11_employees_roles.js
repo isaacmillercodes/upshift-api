@@ -87,7 +87,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           employee_id: knex('employees').where('email', 'finn@balor.com').select('user_id'),
-          role_id: knex('roles').where('title', 'Cook').select('id')
+          role_id: knex('roles').where('title', 'Line Cook').select('id')
         },
         {
           employee_id: knex('employees').where('email', 'randy@savage.com').select('user_id'),
