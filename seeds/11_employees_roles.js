@@ -70,6 +70,10 @@ exports.seed = function(knex, Promise) {
           role_id: knex('roles').where('title', 'Bartender').select('id')
         },
         {
+          employee_id: knex('employees').where('email', 'john@cena.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Host').select('id')
+        },
+        {
           employee_id: knex('employees').where('email', 'sasha@banks.com').select('user_id'),
           role_id: knex('roles').where('title', 'Server').select('id')
         },
@@ -83,7 +87,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           employee_id: knex('employees').where('email', 'finn@balor.com').select('user_id'),
-          role_id: knex('roles').where('title', 'Bartender').select('id')
+          role_id: knex('roles').where('title', 'Cook').select('id')
         },
         {
           employee_id: knex('employees').where('email', 'randy@savage.com').select('user_id'),
@@ -130,8 +134,16 @@ exports.seed = function(knex, Promise) {
           role_id: knex('roles').where('title', 'Server').select('id')
         },
         {
+          employee_id: knex('employees').where('email', 'brock@lesnar.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Line Cook').select('id')
+        },
+        {
           employee_id: knex('employees').where('email', 'trish@stratus.com').select('user_id'),
           role_id: knex('roles').where('title', 'Server').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'trish@stratus.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Host').select('id')
         },
         {
           employee_id: knex('employees').where('email', 'aj@styles.com').select('user_id'),
@@ -160,6 +172,38 @@ exports.seed = function(knex, Promise) {
         {
           employee_id: knex('employees').where('email', 'becky@lynch.com').select('user_id'),
           role_id: knex('roles').where('title', 'Host').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'kurt@angle.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Server').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'kurt@angle.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Bartender').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'seth@rollins.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Server').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'seth@rollins.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Bartender').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'sami@zayn.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Server').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'sami@zayn.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Bartender').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'daniel@bryan.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Server').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'daniel@bryan.com').select('user_id'),
+          role_id: knex('roles').where('title', 'Line Cook').select('id')
         }
       ]);
     });

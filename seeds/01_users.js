@@ -92,6 +92,22 @@ exports.seed = function(knex, Promise) {
         {
           email: 'dean@ambrose.com',
           password: '$2a$06$k7nCEfGT366LX7zUBAduWeu35vuvemkoWlNS0IU6N.jR4r3Yix8Yu'
+        },
+        {
+          email: 'kurt@angle.com',
+          password: '$2a$06$0jX10D1jI/egr9KbAcPWteqL7rscVmHMU1w4ryuDFfejsA748VNIi'
+        },
+        {
+          email: 'seth@rollins.com',
+          password: '$2a$06$ItSR.Q6mP/6Dvaf573Zo/.NO5hupNg6lfb8jFnIhU6XjTvjlidiv.'
+        },
+        {
+          email: 'sami@zayn.com',
+          password: '$2a$06$uKzFD/unyjwFJwWoRFRjFeobP82M.3Ta2Xa5nJXmZdTDtVFRiHbXa'
+        },
+        {
+          email: 'daniel@bryan.com',
+          password: '$2y$10$i8308i80IYkB/6Ot/smbGOZQvXvaUoLpEV8vhJxogZqigljeTVNIK'
         }
       ]);
     });

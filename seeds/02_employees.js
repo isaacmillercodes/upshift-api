@@ -151,7 +151,35 @@ exports.seed = function(knex, Promise) {
           first_name: 'Dean',
           last_name: 'Ambrose',
           phone: '303-280-4290'
-        }
+        },
+        {
+          user_id: knex('users').where('email', 'kurt@angle.com').select('id'),
+          email: 'kurt@angle.com',
+          first_name: 'Kurt',
+          last_name: 'Angle',
+          phone: '303-212-4023'
+        },
+        {
+          user_id: knex('users').where('email', 'seth@rollins').select('id'),
+          email: 'seth@rollins',
+          first_name: 'Seth',
+          last_name: 'Rollins',
+          phone: '303-523-1184'
+        },
+        {
+          user_id: knex('users').where('email', 'sami@zayn.com').select('id'),
+          email: 'sami@zayn.com',
+          first_name: 'Sami',
+          last_name: 'Zayn',
+          phone: '303-684-3275'
+        },
+        {
+          user_id: knex('users').where('email', 'daniel@bryan.com').select('id'),
+          email: 'daniel@bryan.com',
+          first_name: 'Daniel',
+          last_name: 'Bryan',
+          phone: '303-820-4021'
+        },
       ]);
     });
 };

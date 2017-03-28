@@ -216,8 +216,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -240,7 +239,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -273,8 +272,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -289,18 +287,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-03',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-03',
             schedule_id: knex('schedules').where({
@@ -312,6 +298,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-03',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-03',
@@ -344,7 +342,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -558,8 +556,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -582,7 +579,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -615,8 +612,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -631,18 +627,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-04',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-04',
             schedule_id: knex('schedules').where({
@@ -654,6 +638,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-04',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-04',
@@ -686,7 +682,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -900,8 +896,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -924,7 +919,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -957,8 +952,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -973,18 +967,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-05',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-05',
             schedule_id: knex('schedules').where({
@@ -996,6 +978,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-05',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-05',
@@ -1028,7 +1022,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -1242,8 +1236,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -1266,7 +1259,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -1299,8 +1292,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -1315,18 +1307,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-06',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-06',
             schedule_id: knex('schedules').where({
@@ -1338,6 +1318,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-06',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-06',
@@ -1370,7 +1362,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -1584,8 +1576,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -1608,7 +1599,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -1641,8 +1632,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -1657,18 +1647,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-07',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-07',
             schedule_id: knex('schedules').where({
@@ -1680,6 +1658,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-07',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-07',
@@ -1712,7 +1702,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -1926,8 +1916,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -1950,7 +1939,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -1983,8 +1972,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -1999,18 +1987,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-08',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-08',
             schedule_id: knex('schedules').where({
@@ -2022,6 +1998,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-08',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-08',
@@ -2054,7 +2042,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -2268,8 +2256,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -2292,7 +2279,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -2325,8 +2312,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -2341,18 +2327,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-09',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-09',
             schedule_id: knex('schedules').where({
@@ -2364,6 +2338,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-09',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-09',
@@ -2396,7 +2382,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -2610,8 +2596,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -2634,7 +2619,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -2667,8 +2652,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -2683,18 +2667,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-10',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-10',
             schedule_id: knex('schedules').where({
@@ -2706,6 +2678,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-10',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-10',
@@ -2738,7 +2722,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -2952,8 +2936,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -2976,7 +2959,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -3009,8 +2992,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -3025,18 +3007,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-11',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-11',
             schedule_id: knex('schedules').where({
@@ -3048,6 +3018,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-11',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-11',
@@ -3080,7 +3062,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -3294,8 +3276,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -3318,7 +3299,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -3351,8 +3332,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -3367,18 +3347,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-12',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-12',
             schedule_id: knex('schedules').where({
@@ -3390,6 +3358,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-12',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-12',
@@ -3422,7 +3402,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -3636,8 +3616,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -3660,7 +3639,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -3693,8 +3672,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -3709,18 +3687,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-13',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-13',
             schedule_id: knex('schedules').where({
@@ -3732,6 +3698,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-13',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-13',
@@ -3764,7 +3742,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -3978,8 +3956,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -4002,7 +3979,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -4035,8 +4012,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -4051,18 +4027,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-14',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-14',
             schedule_id: knex('schedules').where({
@@ -4074,6 +4038,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-14',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-14',
@@ -4106,7 +4082,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -4320,8 +4296,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -4344,7 +4319,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -4377,8 +4352,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -4393,18 +4367,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-15',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-15',
             schedule_id: knex('schedules').where({
@@ -4416,6 +4378,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-15',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-15',
@@ -4448,7 +4422,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -4662,8 +4636,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -4686,7 +4659,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -4719,8 +4692,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -4735,18 +4707,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-16',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-03',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-16',
             schedule_id: knex('schedules').where({
@@ -4758,6 +4718,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-16',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-03',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-16',
@@ -4790,7 +4762,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -5004,8 +4976,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -5028,7 +4999,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -5061,8 +5032,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -5077,18 +5047,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-17',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-17',
             schedule_id: knex('schedules').where({
@@ -5100,6 +5058,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-17',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-17',
@@ -5132,7 +5102,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -5346,8 +5316,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -5370,7 +5339,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -5403,8 +5372,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -5419,18 +5387,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-18',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-18',
             schedule_id: knex('schedules').where({
@@ -5442,6 +5398,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-18',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-18',
@@ -5474,7 +5442,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -5688,8 +5656,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -5712,7 +5679,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -5745,8 +5712,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -5761,18 +5727,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-19',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-19',
             schedule_id: knex('schedules').where({
@@ -5784,6 +5738,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-19',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-19',
@@ -5816,7 +5782,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -6030,8 +5996,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -6054,7 +6019,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -6087,8 +6052,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -6103,18 +6067,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-20',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-20',
             schedule_id: knex('schedules').where({
@@ -6126,6 +6078,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-20',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-20',
@@ -6158,7 +6122,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -6372,8 +6336,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -6396,7 +6359,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -6429,8 +6392,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -6445,18 +6407,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-21',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-21',
             schedule_id: knex('schedules').where({
@@ -6468,6 +6418,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-21',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-21',
@@ -6500,7 +6462,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -6714,8 +6676,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -6738,7 +6699,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -6771,8 +6732,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -6787,18 +6747,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-22',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-22',
             schedule_id: knex('schedules').where({
@@ -6810,6 +6758,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-22',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-22',
@@ -6842,7 +6802,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -7056,8 +7016,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -7080,7 +7039,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -7113,8 +7072,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -7129,18 +7087,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-23',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-23',
             schedule_id: knex('schedules').where({
@@ -7152,6 +7098,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-23',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-23',
@@ -7184,7 +7142,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -7398,8 +7356,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -7422,7 +7379,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -7455,8 +7412,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -7471,18 +7427,6 @@ exports.seed = function(knex, Promise) {
         },
         {
           role_id: knex('roles').where('title', 'Server').select('id'),
-          shift_id: knex('shifts').where({
-            date: '2017-04-24',
-            schedule_id: knex('schedules').where({
-                start_date: '2017-04-17',
-                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
-              }).select('id'),
-            name: 'Dinner',
-          }).select('id'),
-          quantity: 3
-        },
-        {
-          role_id: knex('roles').where('title', 'Bartender').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-24',
             schedule_id: knex('schedules').where({
@@ -7494,6 +7438,18 @@ exports.seed = function(knex, Promise) {
           quantity: 2
         },
         {
+          role_id: knex('roles').where('title', 'Bartender').select('id'),
+          shift_id: knex('shifts').where({
+            date: '2017-04-24',
+            schedule_id: knex('schedules').where({
+                start_date: '2017-04-17',
+                location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+              }).select('id'),
+            name: 'Dinner',
+          }).select('id'),
+          quantity: 2
+        },
+        {
           role_id: knex('roles').where('title', 'Manager').select('id'),
           shift_id: knex('shifts').where({
             date: '2017-04-24',
@@ -7526,7 +7482,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -7740,8 +7696,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -7764,7 +7719,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -7797,8 +7752,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -7821,7 +7775,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Bartender').select('id'),
@@ -7868,7 +7822,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -8082,8 +8036,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -8106,7 +8059,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -8139,8 +8092,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -8163,7 +8115,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Bartender').select('id'),
@@ -8210,7 +8162,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -8424,8 +8376,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -8448,7 +8399,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -8481,8 +8432,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -8505,7 +8455,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Bartender').select('id'),
@@ -8552,7 +8502,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -8766,8 +8716,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -8790,7 +8739,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -8823,8 +8772,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -8847,7 +8795,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Bartender').select('id'),
@@ -8894,7 +8842,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -9108,8 +9056,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -9132,7 +9079,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -9165,8 +9112,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -9189,7 +9135,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Bartender').select('id'),
@@ -9236,7 +9182,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         ////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
@@ -9450,8 +9396,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -9474,7 +9419,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Manager').select('id'),
@@ -9507,8 +9452,7 @@ exports.seed = function(knex, Promise) {
                 location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
               }).select('id'),
             name: 'Dinner',
-          }).select('id'),
-          quantity: 2
+          }).select('id')
         },
         {
           role_id: knex('roles').where('title', 'Host').select('id'),
@@ -9531,7 +9475,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Dinner',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         },
         {
           role_id: knex('roles').where('title', 'Bartender').select('id'),
@@ -9578,7 +9522,7 @@ exports.seed = function(knex, Promise) {
               }).select('id'),
             name: 'Bar Rush',
           }).select('id'),
-          quantity: 3
+          quantity: 2
         }
         ////////////////////////////////////////////////////////
       ]);

@@ -116,6 +116,38 @@ exports.seed = function(knex, Promise) {
         {
           employee_id: knex('employees').where('email', 'dean@ambrose.com').select('user_id'),
           location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'kurt@angle.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'kurt@angle.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'seth@rollins.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'seth@rollins.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'sami@zayn.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'sami@zayn.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'daniel@bryan.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id')
+        },
+        {
+          employee_id: knex('employees').where('email', 'daniel@bryan.com').select('user_id'),
+          location_id: knex('locations').where('name', 'Smackaroni Grille').select('id')
         }
       ]);
     });
