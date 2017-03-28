@@ -160,8 +160,8 @@ exports.seed = function(knex, Promise) {
           phone: '303-212-4023'
         },
         {
-          user_id: knex('users').where('email', 'seth@rollins').select('id'),
-          email: 'seth@rollins',
+          user_id: knex('users').where('email', 'seth@rollins.com').select('id'),
+          email: 'seth@rollins.com',
           first_name: 'Seth',
           last_name: 'Rollins',
           phone: '303-523-1184'
