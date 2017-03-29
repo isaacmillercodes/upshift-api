@@ -2,12 +2,17 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8000;
 const bodyParser = require('body-parser');
-// const zebras = require('./routes/zebras')
+const morgan = require('morgan');
+const jwt = require('jsonwebtoken');
+const authRoutes = require('./routes/authRoutes');
+
+app.set('secret', process.env.SECRET_KEY);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('tiny'));
 
-// app.use('/zebras', zebras)
+app.use('/auth', authRoutes);
 
 app.listen(PORT, ()=> {
   console.log(`Listening on port ${PORT}`);
