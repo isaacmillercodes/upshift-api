@@ -11,4 +11,12 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/:id', (req, res) => {
+  db.read('users', req.params.id)
+  .then(users => {
+    res.json(users);
+  });
+});
+
+
 module.exports = router;
