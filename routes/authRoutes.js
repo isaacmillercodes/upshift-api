@@ -4,12 +4,12 @@ const bcrypt = require('bcryptjs');
 const salt = bcrypt.genSaltSync(10);
 const jwt = require('jsonwebtoken');
 
-router.get('/', (req, res) => {
-  db.list('users')
-  .then(users => {
-    res.json(users);
-  });
-});
+// router.get('/', (req, res) => {
+//   db.list('users')
+//   .then(users => {
+//     res.json(users);
+//   });
+// });
 
 router.post('/register', (req, res) => {
   let email = req.body.email;
