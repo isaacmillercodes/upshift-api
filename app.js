@@ -5,8 +5,13 @@ const PORT = process.env.PORT || 8000;
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
+
 const authRoutes = require('./routes/authRoutes');
 const users = require('./routes/userRoutes');
+const employees = require('./routes/employeeRoutes');
+const admins = require('./routes/adminRoutes');
+const companies = require('./routes/companyRoutes');
+const locations = require('./routes/locationRoutes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -36,6 +41,10 @@ app.use('/auth', authRoutes);
 // });
 
 app.use('/users', users);
+app.use('/employees', employees);
+app.use('/admins', admins);
+app.use('/companies', companies);
+app.use('/locations', locations);
 
 app.listen(PORT, ()=> {
   console.log(`Listening on port ${PORT}`);

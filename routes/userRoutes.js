@@ -8,13 +8,25 @@ router.get('/', (req, res) => {
   db.list('users')
   .then(users => {
     res.json(users);
+  })
+  .catch((err) => {
+    res.status(400).json({
+      message: 'Failed to get users',
+      error: err
+    });
   });
 });
 
 router.get('/:id', (req, res) => {
   db.read('users', req.params.id)
-  .then(users => {
-    res.json(users);
+  .then(user => {
+    res.json(user);
+  })
+  .catch((err) => {
+    res.status(400).json({
+      message: 'Failed to get user',
+      error: err
+    });
   });
 });
 
@@ -36,9 +48,9 @@ router.put('/:id', (req, res) => {
     });
   })
   .catch((err) => {
-    res.status(400).send({
-      status: 'Failed to update user',
-      message: err
+    res.status(400).json({
+      message: 'Failed to update user',
+      error: err
     });
   });
 
@@ -52,9 +64,9 @@ router.delete('/:id', (req, res) => {
     });
   })
   .catch((err) => {
-    res.status(400).send({
-      status: 'Failed to delete user',
-      message: err
+    res.status(400).json({
+      message: 'Failed to delete user',
+      error: err
     });
   });
 });
