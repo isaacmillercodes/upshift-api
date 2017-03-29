@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv').config();
 const PORT = process.env.PORT || 8000;
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
 const authRoutes = require('./routes/authRoutes');
-
-app.set('secret', process.env.SECRET_KEY);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
