@@ -115,7 +115,7 @@ router.delete('/:id', (req, res) => {
   db.destroy('locations', 'id', req.params.id)
   .then(deleted => {
     res.json({
-      message: `Successfully deleted location with id of ${deleted[0].id}`
+      message: `Successfully deleted location with an id of ${deleted[0].id}`
     });
   })
   .catch((err) => {

@@ -8,22 +8,26 @@ exports.seed = function(knex, Promise) {
         {
           location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id'),
           start_date: '2017-04-03',
-          end_date: '2017-04-16'
+          end_date: '2017-04-16',
+          votes_available: 15
         },
         {
           location_id: knex('locations').where('name', 'Smackaroni Grille').select('id'),
           start_date: '2017-04-03',
-          end_date: '2017-04-16'
+          end_date: '2017-04-16',
+          votes_available: 15
         },
         {
           location_id: knex('locations').where('name', 'Raw Paleo Cafe').select('id'),
           start_date: '2017-04-17',
-          end_date: '2017-04-30'
+          end_date: '2017-04-30',
+          votes_available: 15
         },
         {
           location_id: knex('locations').where('name', 'Smackaroni Grille').select('id'),
           start_date: '2017-04-17',
-          end_date: '2017-04-30'
+          end_date: '2017-04-30',
+          votes_available: 15
         }
       ]);
     });

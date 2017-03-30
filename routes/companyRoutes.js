@@ -103,7 +103,7 @@ router.delete('/:id', (req, res) => {
   db.destroy('companies', req.params.id)
   .then(deleted => {
     res.json({
-      message: `Successfully deleted company with id of ${deleted[0].id}`
+      message: `Successfully deleted company with an id of ${deleted[0].id}`
     });
   })
   .catch((err) => {
