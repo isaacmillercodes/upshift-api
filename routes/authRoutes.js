@@ -4,13 +4,6 @@ const bcrypt = require('bcryptjs');
 const salt = bcrypt.genSaltSync(10);
 const jwt = require('jsonwebtoken');
 
-// router.get('/', (req, res) => {
-//   db.list('users')
-//   .then(users => {
-//     res.json(users);
-//   });
-// });
-
 router.post('/register', (req, res) => {
   let email = req.body.email;
   let password = req.body.password;
@@ -35,9 +28,9 @@ router.post('/register', (req, res) => {
     });
   })
   .catch((err) => {
-    res.status(400).send({
-      status: 'Failed to create new user',
-      message: err
+    res.status(400).json({
+      message: 'Failed to create new user',
+      error: err
     });
   });
 });
@@ -76,7 +69,10 @@ router.post('/login', (req, res, next) => {
       }
     })
     .catch((err) => {
-      console.log(err);
+      res.status(400).json({
+        message: 'Failed to log in',
+        error: err
+      });
     });
   }
 });

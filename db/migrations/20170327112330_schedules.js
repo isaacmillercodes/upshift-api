@@ -4,6 +4,7 @@ exports.up = knex => {
     table.integer('location_id').references('locations.id');
     table.date('start_date');
     table.date('end_date');
+    table.integer('votes_available').defaultTo(10);
   });
 };
 
