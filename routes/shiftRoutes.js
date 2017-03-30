@@ -17,13 +17,24 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   db.read('shifts', 'id', req.params.id)
   .then(shift => {
-    res.json(shift[0]);
+    const foundShift = shift[0];
+    foundShift.roles = `/shifts/${foundShift.id}/roles`;
+    res.json(foundShift);
   })
   .catch((err) => {
     res.status(400).json({
       message: 'Failed to get shift',
       error: err
     });
+  });
+});
+
+router.get('/:id/roles', (req, res) => {
+  db.read('roles_shifts', 'roles_shifts.shift_id', req.params.id)
+  .join('roles', 'roles_shifts.role_id', '=', 'roles.id')
+  .select('roles.id as role_id', 'roles.title', 'roles_shifts.quantity')
+  .then(roles => {
+    res.json(roles);
   });
 });
 

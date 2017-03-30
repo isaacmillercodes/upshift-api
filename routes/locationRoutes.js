@@ -17,13 +17,25 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   db.read('locations', 'id', req.params.id)
   .then(location => {
-    res.json(location[0]);
+    const foundLocation = location[0];
+    foundLocation.employees = `/locations/${foundLocation.id}/employees`;
+    res.json(foundLocation);
   })
   .catch((err) => {
     res.status(400).json({
       message: 'Failed to get location',
       error: err
     });
+  });
+});
+
+router.get('/:id/employees', (req, res) => {
+  db.read('employees_locations', 'location_id', req.params.id)
+  .join('employees', 'employees_locations.employee_id', '=', 'employees.user_id')
+  .select('employees.user_id as employee_id')
+  .select('employees.first_name', 'employees.last_name')
+  .then(employees => {
+    res.json(employees);
   });
 });
 
