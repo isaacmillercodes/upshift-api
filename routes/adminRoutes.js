@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  db.readExtension('admins', req.params.id)
+  db.read('admins', 'user_id', req.params.id)
   .then(admin => {
     res.json(admin[0]);
   })
@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
     });
   }
 
-  db.readExtension('admins', user_id)
+  db.read('admins', 'user_id', user_id)
   .then(foundAdmin => {
     res.json({
       message: 'That admin already exists!',
@@ -72,7 +72,7 @@ router.put('/:id', (req, res) => {
     enabled: req.body.enabled
   };
 
-  db.updateExtension('admins', id, updatedAdmin)
+  db.update('admins', 'user_id', id, updatedAdmin)
   .then(admin => {
     res.json({
       message: 'Successfully updated admin!',
@@ -89,10 +89,10 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  db.destroyExtension('admins', req.params.id)
-  .then(deletedId => {
+  db.destroy('admins', req.params.id)
+  .then(deleted => {
     res.json({
-      message: `Successfully deleted admin with user id of ${deletedId}`
+      message: `Successfully deleted admin with user id of ${deleted[0].id}`
     });
   })
   .catch((err) => {

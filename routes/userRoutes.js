@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  db.read('users', req.params.id)
+  db.read('users', 'id', req.params.id)
   .then(user => {
     res.json(user);
   })
@@ -40,7 +40,7 @@ router.put('/:id', (req, res) => {
     password: hash
   };
 
-  db.update('users', req.params.id, updatedUser)
+  db.update('users', 'id', req.params.id, updatedUser)
   .then(user => {
     res.json({
       message: 'Successfully updated user!',
@@ -57,10 +57,10 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  db.destroy('users', req.params.id)
-  .then(deletedId => {
+  db.destroy('users', 'id', req.params.id)
+  .then(deleted => {
     res.json({
-      message: `Successfully deleted user with id ${deletedId}`
+      message: `Successfully deleted user with id ${deleted[0].id}`
     });
   })
   .catch((err) => {

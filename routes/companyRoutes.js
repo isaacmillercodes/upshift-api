@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  db.read('companies', req.params.id)
+  db.read('companies', 'id', req.params.id)
   .then(company => {
     res.json(company[0]);
   })
@@ -66,7 +66,7 @@ router.put('/:id', (req, res) => {
   const name = req.body.name;
   const industry = req.body.industry;
 
-  db.read('companies', id)
+  db.read('companies', 'id', id)
   .then(foundCompany => {
 
     const updatedCompany = {
@@ -75,7 +75,7 @@ router.put('/:id', (req, res) => {
       industry: industry || foundCompany[0].industry
     };
 
-    db.update('companies', id, updatedCompany)
+    db.update('companies', 'id', id, updatedCompany)
     .then(company => {
       res.json({
         message: 'Successfully updated company!',
@@ -101,9 +101,9 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   db.destroy('companies', req.params.id)
-  .then(deletedId => {
+  .then(deleted => {
     res.json({
-      message: `Successfully deleted company with id of ${deletedId}`
+      message: `Successfully deleted company with id of ${deleted[0].id}`
     });
   })
   .catch((err) => {

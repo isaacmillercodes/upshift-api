@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  db.read('locations', req.params.id)
+  db.read('locations', 'id', req.params.id)
   .then(location => {
     res.json(location[0]);
   })
@@ -75,7 +75,7 @@ router.put('/:id', (req, res) => {
   const state = req.body.state;
   const zip = req.body.zip;
 
-  db.read('locations', id)
+  db.read('locations', 'id', id)
   .then(foundLocation => {
 
     const updatedLocation = {
@@ -87,7 +87,7 @@ router.put('/:id', (req, res) => {
       zip: zip || foundLocation[0].zip,
     };
 
-    db.update('locations', id, updatedLocation)
+    db.update('locations', 'id', id, updatedLocation)
     .then(location => {
       res.json({
         message: 'Successfully updated location!',
@@ -112,10 +112,10 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  db.destroy('locations', req.params.id)
-  .then(deletedId => {
+  db.destroy('locations', 'id', req.params.id)
+  .then(deleted => {
     res.json({
-      message: `Successfully deleted location with id of ${deletedId}`
+      message: `Successfully deleted location with id of ${deleted[0].id}`
     });
   })
   .catch((err) => {

@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  db.readExtension('employees', req.params.id)
+  db.read('employees', 'user_id', req.params.id)
   .then(employee => {
     res.json(employee[0]);
   })
@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
   const last_name = req.body.last_name;
   const phone = req.body.phone;
 
-  db.readExtension('employees', req.params.id)
+  db.read('employees', 'user_id', req.params.id)
   .then(foundEmployee => {
     const updatedEmployee = {
       email: email || foundEmployee[0].email,
@@ -80,7 +80,7 @@ router.put('/:id', (req, res) => {
       phone: phone || foundEmployee[0].phone
     };
 
-    db.updateExtension('employees', id, updatedEmployee)
+    db.update('employees', 'user_id', id, updatedEmployee)
     .then(employee => {
       res.json({
         message: 'Successfully updated employee!',
@@ -104,10 +104,10 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  db.destroyExtension('employees', req.params.id)
-  .then(deletedId => {
+  db.destroy('employees', 'user_id', req.params.id)
+  .then(deleted => {
     res.json({
-      message: `Successfully deleted employee with user id of ${deletedId}`
+      message: `Successfully deleted employee with user id of ${deleted[0].id}`
     });
   })
   .catch((err) => {
