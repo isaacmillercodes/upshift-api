@@ -17,13 +17,24 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   db.read('schedules', 'id', req.params.id)
   .then(schedule => {
-    res.json(schedule[0]);
+    const foundSchedule = schedule[0];
+    foundSchedule.shifts = `/schedules/${foundSchedule.id}/shifts`;
+    res.json(foundSchedule);
   })
   .catch((err) => {
     res.status(400).json({
       message: 'Failed to get schedule',
       error: err
     });
+  });
+});
+
+router.get('/:id/shifts', (req, res) => {
+  db.read('schedules_shifts', 'schedules_shifts.schedule_id', req.params.id)
+  .join('shifts', 'schedules_shifts.shift_id', '=', 'shifts.id')
+  .select('shifts.id as shift_id', 'shifts.name', 'shifts.date', 'shifts.start_time', 'shifts.end_time')
+  .then(shifts => {
+    res.json(shifts);
   });
 });
 
