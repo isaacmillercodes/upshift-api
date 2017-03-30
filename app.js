@@ -14,6 +14,8 @@ const companies = require('./routes/companyRoutes');
 const locations = require('./routes/locationRoutes');
 const schedules = require('./routes/scheduleRoutes');
 const shifts = require('./routes/shiftRoutes');
+const roles = require('./routes/roleRoutes');
+const votes = require('./routes/voteRoutes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -49,6 +51,8 @@ app.use('/companies', companies);
 app.use('/locations', locations);
 app.use('/schedules', schedules);
 app.use('/shifts', shifts);
+app.use('/roles', roles);
+app.use('/votes', votes);
 
 app.listen(PORT, ()=> {
   console.log(`Listening on port ${PORT}`);
