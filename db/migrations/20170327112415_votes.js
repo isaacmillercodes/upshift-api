@@ -4,6 +4,7 @@ exports.up = knex => {
     table.integer('employee_id').references('employees.user_id');
     table.integer('role_id').references('roles.id');
     table.integer('shift_id').references('shifts.id');
+    table.date('date');
     table.integer('quantity').defaultTo(1);
   });
 };
