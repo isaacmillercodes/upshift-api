@@ -19,6 +19,7 @@ router.get('/:id', (req, res) => {
   .then(role => {
     const foundRole = role[0];
     foundRole.shifts = `/roles/${foundRole.id}/shifts`;
+    foundRole.employees = `/roles/${foundRole.id}/employees`;
     res.json(foundRole);
   })
   .catch((err) => {
@@ -35,6 +36,15 @@ router.get('/:id/shifts', (req, res) => {
   .select('shifts.id as shift_id', 'shifts.name', 'shifts.date', 'shifts.start_time', 'shifts.end_time')
   .then(shifts => {
     res.json(shifts);
+  });
+});
+
+router.get('/:id/employees', (req, res) => {
+  db.read('employees_roles', 'employees_roles.role_id', req.params.id)
+  .join('employees', 'employees_roles.employee_id', '=', 'employees.user_id')
+  .select('employees.user_id', 'employees.first_name', 'employees.last_name')
+  .then(employees => {
+    res.json(employees);
   });
 });
 
