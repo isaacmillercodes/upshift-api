@@ -1,7 +1,7 @@
 exports.up = knex => {
   return knex.schema.createTable('locations', table => {
     table.increments();
-    table.integer('company_id').references('companies.id');
+    table.integer('company_id').references('companies.id').onDelete('CASCADE');
     table.string('name');
     table.string('address');
     table.string('city');

@@ -16,6 +16,7 @@ const schedules = require('./routes/scheduleRoutes');
 const shifts = require('./routes/shiftRoutes');
 const roles = require('./routes/roleRoutes');
 const votes = require('./routes/voteRoutes');
+const employees_locations = require('./routes/employees_locationsRoutes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -46,6 +47,7 @@ app.use('/auth', authRoutes);
 
 app.use('/users', users);
 app.use('/employees', employees);
+app.use('/employees/:employeeID/locations/:locationID', employees_locations);
 app.use('/admins', admins);
 app.use('/companies', companies);
 app.use('/locations', locations);

@@ -1,6 +1,6 @@
 exports.up = knex => {
   return knex.schema.createTable('employees', table => {
-    table.integer('user_id').references('users.id').primary();
+    table.integer('user_id').references('users.id').primary().onDelete('CASCADE');
     table.string('email').unique();
     table.string('first_name');
     table.string('last_name');
