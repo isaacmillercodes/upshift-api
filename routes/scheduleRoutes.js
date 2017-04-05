@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
 router.get('/:id/shifts', (req, res) => {
   db.read('schedules_shifts', 'schedules_shifts.schedule_id', req.params.id)
   .join('shifts', 'schedules_shifts.shift_id', '=', 'shifts.id')
-  .select('shifts.id as shift_id', 'shifts.name', 'shifts.date', 'shifts.start_time', 'shifts.end_time')
+  .select('shifts.id as shift_id', 'shifts.name', 'schedules_shifts.date', 'shifts.start_time', 'shifts.end_time')
   .then(shifts => {
     res.json(shifts);
   });
@@ -128,6 +128,5 @@ router.delete('/:id', (req, res) => {
     });
   });
 });
-
 
 module.exports = router;

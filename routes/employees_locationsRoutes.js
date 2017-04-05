@@ -73,45 +73,6 @@ router.put('/', (req, res) => {
   });
 });
 
-// router.put('/:id', (req, res) => {
-//   const id = req.params.id;
-//   const email = req.body.email;
-//   const first_name = req.body.first_name;
-//   const last_name = req.body.last_name;
-//   const phone = req.body.phone;
-//
-//   db.read('employees', 'user_id', req.params.id)
-//   .then(foundEmployee => {
-//     const updatedEmployee = {
-//       email: email || foundEmployee[0].email,
-//       first_name: first_name || foundEmployee[0].first_name,
-//       last_name: last_name || foundEmployee[0].last_name,
-//       phone: phone || foundEmployee[0].phone
-//     };
-//
-//     db.update('employees', 'user_id', id, updatedEmployee)
-//     .then(employee => {
-//       res.json({
-//         message: 'Successfully updated employee!',
-//         employee: employee[0]
-//       });
-//     })
-//     .catch((err) => {
-//       res.status(400).json({
-//         message: 'Failed to update employee',
-//         error: err
-//       });
-//     });
-//   })
-//   .catch((err) => {
-//     res.status(400).json({
-//       message: 'Failed to update employee',
-//       error: err
-//     });
-//   });
-//
-// });
-
 router.delete('/', (req, res) => {
 
   const employee_id = req.params.employeeID;
@@ -133,6 +94,5 @@ router.delete('/', (req, res) => {
     });
   });
 });
-
 
 module.exports = router;
