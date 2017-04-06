@@ -47,14 +47,9 @@ router.post('/', (req, res) => {
 
 router.put('/', (req, res) => {
 
-  if (!req.body.date) {
-    res.status(400).json({
-      message: 'Please include a date for this request.',
-    });
-  }
-
   const schedule_id = req.params.scheduleID;
   const shift_id = req.params.shiftID;
+  const date = req.query.date;
 
   const newSchedule = req.body.schedule_id;
   const newShift = req.body.shift_id;
@@ -63,13 +58,13 @@ router.put('/', (req, res) => {
   const updatedScheduleShift = {
     schedule_id: newSchedule || schedule_id,
     shift_id: newShift || shift_id,
-    date: newDate
+    date: newDate || date
   };
 
   db.list('schedules_shifts').where({
     schedule_id: schedule_id,
     shift_id: shift_id,
-    date: newDate
+    date: date
   }).update(updatedScheduleShift, '*').then(updatedScheduleShift => {
     res.status(200).json({
       message: `Successfully updated schedule/shift relationship`,
@@ -86,7 +81,7 @@ router.put('/', (req, res) => {
 
 router.delete('/', (req, res) => {
 
-  if (!req.body.date) {
+  if (!req.query.date) {
     res.status(400).json({
       message: 'Please include a date for this request.',
     });
@@ -94,7 +89,7 @@ router.delete('/', (req, res) => {
 
   const schedule_id = req.params.scheduleID;
   const shift_id = req.params.shiftID;
-  const date = req.body.date;
+  const date = req.query.date;
 
   db.list('schedules_shifts').where({
     schedule_id: schedule_id,
