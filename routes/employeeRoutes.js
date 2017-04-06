@@ -31,13 +31,6 @@ router.get('/:id', (req, res) => {
 });
 
 router.get('/:id/locations', (req, res) => {
-  // db.read('employees', 'user_id', req.params.id)
-  // .join('employees_locations', function() {
-  //   this.on('employees.user_id', 'employee_id');
-  // }).join('locations', function() {
-  //   this.on('employees_locations.location_id', 'locations.id');
-  // }).as('locations')
-  // .select('employees.*', 'locations')
   db.read('employees_locations', 'employee_id', req.params.id)
   .join('locations', 'employees_locations.location_id', '=', 'locations.id')
   .select('locations.name as location_name', 'locations.id as location_id')
