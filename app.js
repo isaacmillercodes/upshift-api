@@ -23,10 +23,7 @@ const schedules_shifts = require('./routes/schedules_shiftsRoutes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('tiny'));
-}
+app.use(morgan('tiny'));
 
 app.use('/auth', authRoutes);
 
